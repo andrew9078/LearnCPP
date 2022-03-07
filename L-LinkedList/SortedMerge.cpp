@@ -1,6 +1,8 @@
+//Program to combine two linked lists and print the elements in sequential order
+//Ti
 #include <iostream>
 using namespace std;
-//Program to combine two linked lists and print the elements in sequential order
+
 struct Node {
 	int data;
 	struct Node* next;
@@ -48,17 +50,17 @@ Node* SortedMerge(Node* list1, Node* list2)
 
 int main()
 {
-	Node* l1 = newNode(1);
-	l1->next = newNode(3);
-	l1->next->next = newNode(7);
+	Node* l1 = newNode(5);
+	l1->next = newNode(10);
+	l1->next->next = newNode(15);
 
-	// 1->3->7
+	// 5->10->15
 
 	Node* l2 = newNode(2);
-	l2->next = newNode(4);
-	l2->next->next = newNode(6);
+	l2->next = newNode(3);
+	l2->next->next = newNode(20);
 
-	// 2->4->6
+	// 2->3->20
 
 	Node* merge = SortedMerge(l1, l2);
 
